@@ -18,6 +18,25 @@
         </nav>
     </div>
 </template>
-<style lang="">
-    
+<style lang="scss">
+    @use '../styles/partials/mixins.scss' as *;
+    @use '../styles/partials/variable.scss' as *;
+
+    ul{
+        @include justify-content-center;
+        margin: 2rem;  
+        list-style: none;
+
+        li a{
+            padding: 1rem;
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 22px ;
+            color:white;
+            
+            
+
+        }
+     }
+
 </style>
