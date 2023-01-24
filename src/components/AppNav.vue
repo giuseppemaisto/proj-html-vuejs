@@ -24,7 +24,7 @@
 
     ul{
         @include justify-content-center;
-        margin: 2rem;  
+        margin: auto;  
         list-style: none;
 
         li a{

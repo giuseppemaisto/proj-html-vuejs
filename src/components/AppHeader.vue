@@ -41,31 +41,33 @@
             <img class="sponsor" src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/sponsor1.png" alt="">
             <img class="sponsor" src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/sponsor2.png" alt="">
            <img src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/logo-football.png" alt="logo">
-            <div><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
-            <span>SPONSOR</span>
-          
+           <a ><i class="fa-brands fa-facebook-f fa-2x mx-2"></i></a>
+            <a><i class="fa-brands fa-instagram fa-2x mx-2"></i></a>
+            <i class="fa-brands fa-twitter fa-2x mx-2"></i>
+
         </div>
         <AppNav :Navbar="Navbar"/>
     </header>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
     @use '../styles/partials/mixins.scss' as *;
     @use '../styles/partials/variable.scss' as *;
 
     header{
         height: 200px;
-        background-color: rgba(0,0,0,0.6);
+        background-color: rgba(0,0,0,0.8);
 
         .logo{
             @include justify-content-center;
             color: white;
-            span{
-                margin: 1rem;
-            }
+           
+           
         }
         .sponsor{
             height: 70px;
         }
+
+        
     }
     
 </style>
