@@ -8,12 +8,12 @@ export default {
             return{
                 menuFooter:[
                    {
-                    label: 'EDUCATION',
+                    label: 'Education',
                     details: [
                         'FIXTURES & RESULTS',
                         'LEAGUE TABLE',
                         'PLAYER',
-                        'GALLERY'
+                        'GALLERY',
                     ]
                    } ,
                    {
@@ -22,7 +22,7 @@ export default {
                         'HOME',
                         'BLOG',
                         'GALLERY',
-                        'CONTACT'
+                        'CONTACT',
                     ]
                    } ,
                 ]
@@ -32,31 +32,10 @@ export default {
 </script>
 <template lang="">
 <footer>
-    <div class="row">
-        <div class="col">
-            <div class="logo">
-                logo
-            </div>
-            <div class="contatti">
-                <div>contatti</div>
-                <div>contatti</div>
-                <div>contatti</div>
-            </div>
-            <div class="social"></div>
-
-        </div>
-        <div class="col">
-            <div class="newsletter">
-                <div class="newsletter-text"></div>
-                <div class="input-mail"></div>
-            </div>
-        </div>
-        <div class="col">
-
+ 
             <AppFooterInfo :menuFooter="menuFooter"/>
 
-        </div>
-    </div>
+       
 </footer>
 </template>
 <style lang="scss" scoped>
@@ -65,7 +44,44 @@ export default {
 
     footer{
         background-color: black;
-        height: 300px;
+        height: 400px;
         color: white;
+        padding: 1rem;
+
+        .logo img{
+            width: 60px;
+            margin-left:4rem ;
+            margin-bottom: 3rem;
+            
+        }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+
+            li{
+                margin: 0.5rem;
+            }
+        }
+        .social{
+            margin-left: 1rem;
+            .icon{
+                margin:  0 1rem 0 1rem;
+                border: 1px solid white;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+               
+            }
+        }
+
+        .form-control{
+            padding: 1rem;
+            border-radius: 20px;
+        }
+        button{
+            width: 500px;
+            border-radius: 20px;
+            padding: 1rem;
+        }
     }
 </style>
