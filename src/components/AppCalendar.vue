@@ -1,40 +1,26 @@
 <script>
-import AppCarousel from './AppCarousel.vue';
-import AppMatch from './AppMatch.vue';
-import AppPlayers from './AppPlayers.vue';
-import AppCalendar from './AppCalendar.vue';
-import AppSponsor from './AppSponsor.vue';
-import AppCarouselArticle from './AppCarouselArticle.vue';
-
-export default {
-        components:{
-            AppCarousel,
-            AppMatch,
-           AppSponsor,
-           AppPlayers,
-            AppCarouselArticle,
-            AppCalendar,
-           
-        },
+    export default {
         data(){
             return{
                 ArrayMatch:[
                     {
                         imgSquadra1:'/../public/img/club-3.png',
                         nameSquadra1:'Schalke Club',
-                        nameSquadra2:'/../public/img/club-4.png',
-                        imgSquadra2:'Inter Club',
+                        nameSquadra2:'Inter Club',
+                        imgSquadra2:'/../public/img/club-4.png',
                         data:'October 20, 2022 17:00 pm',
                         luogo:'Expert Stadium',
                     },
+                    
                     {
                         imgSquadra1:'/../public/img/club-9.png',
                         nameSquadra1:'Atletico Club',
-                        nameSquadra2:'/../public/img/club-6.png',
-                        imgSquadra2:'Schalke Club',
+                        nameSquadra2:'Schalke Club',
+                        imgSquadra2:'/../public/img/club-6.png',
                         data:'September 18, 2022 21:00pm',
                         luogo:'Expert Stadium',
                     },
+                    
                     {
                         imgSquadra1:'/../public/img/club-2.png',
                         nameSquadra1:'United Fs Club',
@@ -62,18 +48,62 @@ export default {
                 ]
             }
         }
-       
-}
+    }
 </script>
 <template lang="">
-<AppCarousel></AppCarousel>
-<AppMatch></AppMatch>
-<AppCalendar></AppCalendar>
-<AppPlayers></AppPlayers>
-<AppSponsor></AppSponsor>
-<AppCarouselArticle></AppCarouselArticle>
+    <div class="contenitore">
+        <ul class="d-flex">
+            <li class="d-flex" v-for="(item, index) in ArrayMatch" :key="index">
+               
+                <div class="nome">
+                    <h2>{{item.nameSquadra1}}</h2>
+                </div>
+                <div class="squadre1">
+                
+                <img :src="item.imgSquadra1" alt="">
+                 </div>
+                 <h3 class="vs">VS</h3>
+                <div class="squadre2">
+                    <img :src="item.imgSquadra2" alt="">
+                </div>
+                <div class="nome">
+                    <h2>{{item.nameSquadra2}}</h2>
+                </div>
+                
+           
+             </li>
+        </ul>
+    </div>
 </template>
 <style lang="scss" scoped>
 
+.contenitore{
+    background-image: url(../../public/img/saha.jpg);
+}
+    ul{
+        display: flex;
+       flex-direction: column;
+        justify-content: center;
 
+        img{
+            width:100px;
+        }
+        li{
+            background-color: rgba(0,0,0,0.3);
+            margin: 1rem;
+            justify-content: center;
+        }
+    }
+    .squadre1{
+        display: flex;
+        flex-direction: column;
+    }
+    .nome{
+        margin-top: 2rem;
+        color:white
+    }
+    .vs{
+        margin-top: 2rem;
+        color:white
+    }
 </style>
