@@ -1,12 +1,16 @@
 <script>
 import AppCarousel from './AppCarousel.vue';
 import AppMatch from './AppMatch.vue';
-import AppCalendarMatch from './AppCalendarMatch.vue'
+
+import AppCarouselArticle from './AppCarouselArticle.vue';
+
 export default {
         components:{
             AppCarousel,
             AppMatch,
-            AppCalendarMatch,
+           
+            AppCarouselArticle,
+           
         },
         data(){
             return{
@@ -60,7 +64,8 @@ export default {
 <template lang="">
 <AppCarousel></AppCarousel>
 <AppMatch></AppMatch>
-<AppCalendarMatch></AppCalendarMatch>
+
+<AppCarouselArticle></AppCarouselArticle>
 </template>
 <style lang="scss" scoped>
 
