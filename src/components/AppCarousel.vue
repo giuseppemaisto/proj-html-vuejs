@@ -7,23 +7,28 @@
                         slide:[
                                 {
                                 image: '/../public/img/slider1-1.jpg',
+                                title: 'Welcome to',
+                                text: 'Football Club',
+                                secondText: 'Live Match fix types and results'
+                                }, {
+                                    image: '/../public/img/slider2-1.jpg',
+                                    title: 'Football Club',
+                                    text: 'Sport Club',
+                                    secondText: 'private football Matches'
                                     
                                 }, {
-                                    image: '/../public/img/slider1-2.jpg',
+                                    image: '/../public/img/slider3.jpg',
+                                    title: 'Professional Football',
+                                    text: 'Football Club',
+                                    secondText: 'football is the poetry to moviment'
+                                   
+                                }, {
+                                    image: '/../public/img/slider4.jpg',
+                                    title: 'Football Club',
+                                    text: 'Sport Club',
+                                    secondText: 'football is a head game'
                                     
-                                }, {
-                                    image: 'img/03.webp',
-                                    title: 'Fortnite',
-                                    text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
-                                }, {
-                                    image: 'img/04.webp',
-                                    title: 'Stray',
-                                    text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
-                                }, {
-                                    image: 'img/05.webp',
-                                    title: "Marvel's Avengers",
-                                    text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
-                                }
+                                }, 
                         
                             ]
                     }  
@@ -43,6 +48,11 @@
                 this.activeImage =this.slide.length-1
             }
         },
+        startAutoplay(){
+            this.autoplay = setInterval(() =>{
+                this.next()
+            }, 3000)
+        },
       
         stopAutoScroll(){
             clearInterval(this.autoplay);
@@ -53,26 +63,39 @@
         </script>
 <template lang="">
     <div class="d-flex flex-column">
-        <div class="container">
+        
             
                 <div class="item">
                     <div class="image" @mouseover="StopAutoScroll" @mouseleave="autoScroll">
                         <img :src="slide[activeImage].image" :alt="slide[activeImage].image">
                     </div>
                         <div class="text">
-                            <h2>{{slide[activeImage].title}} </h2>
-                            <p>{{slide[activeImage].text}}</p>
+                            <h1>{{slide[activeImage].title}} </h1>
+                            <h2>{{slide[activeImage].text}}</h2>
+                            <h4>{{slide[activeImage].secondText}}</h4>
                         </div>
+                </div>
+                <div>
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
+                </div>
+                <div class="button">
+                    <button>Learn More <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                
 
 
-        </div>
+        
     </div>
 </template>
 <style lang="scss" scoped>
-
+ @use '../styles/partials/mixins.scss' as *;
+    @use '../styles/partials/variable.scss' as *;
+.container{
+    width: 100%;
+    background-color: gray;
+}
 .image{
     height: 100%;
 }
@@ -92,10 +115,32 @@ object-fit: cover;
 
 .item .text {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
+    right: 30%;
+    bottom: 50%;
+    text-align: center;
     color: white;
+    
+    
+
+   
+}
+h1, h2{
+    font-size: 6rem;
+    font-weight: bold;
+}
+.button{
+    position: absolute;
+    top:100%;
+    left: 45%;
+
+    button{
+        padding: 1rem;
+        width: 150px;
+        border-radius: 20px;
+        border:1px solid white;
+        background-color: transparent;
+        color: white;
+    }
 }
 
 
@@ -107,15 +152,24 @@ object-fit: cover;
 .prev, .next {
     width: 20px;
     height: 20px;
-    
+    padding: 1rem;
     border-radius: 50%;
-    background: #ccc;
+    background: rgba(204,204,204, 0.5);
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    transform: translate(-100%);
     cursor: pointer;
     z-index: 999;
 }
+.prev{
+    top: 70%;
+    right: 90%;
+    
+}
+.next{
+right:2%;
+top:70%
+}
+
 
 .next {
     bottom: 0;
