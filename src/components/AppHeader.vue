@@ -38,9 +38,9 @@
 <template lang="">
     <header>
         <div class="logo">
-            <img class="sponsor" src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/sponsor1.png" alt="">
-            <img class="sponsor" src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/sponsor2.png" alt="">
-           <img src="https://garantiwebtasarim.com/wordpress/footballclub/wp-content/uploads/2022/05/logo-football.png" alt="logo">
+            <img class="sponsor" src="/../public/img/sponsor1.png" alt="">
+            <img class="sponsor" src="/../public/img/sponsor2.png" alt="">
+           <img src="/../public/img/favicon-football.png" alt="logo">
            <a ><i class="fa-brands fa-facebook-f fa-2x mx-2"></i></a>
             <a><i class="fa-brands fa-instagram fa-2x mx-2"></i></a>
             <i class="fa-brands fa-twitter fa-2x mx-2"></i>
@@ -61,6 +61,7 @@
         .logo{
             @include justify-content-center;
             color: white;
+            margin-bottom: 3rem;
            
            
         }
