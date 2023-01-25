@@ -92,10 +92,7 @@
 <style lang="scss" scoped>
  @use '../styles/partials/mixins.scss' as *;
     @use '../styles/partials/variable.scss' as *;
-.container{
-    width: 100%;
-    background-color: gray;
-}
+
 .image{
     height: 100%;
 }

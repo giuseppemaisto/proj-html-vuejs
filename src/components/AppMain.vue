@@ -1,6 +1,7 @@
 <script>
 import AppCarousel from './AppCarousel.vue';
 import AppMatch from './AppMatch.vue';
+import AppPlayers from './AppPlayers.vue'
 import AppSponsor from './AppSponsor.vue';
 import AppCarouselArticle from './AppCarouselArticle.vue';
 
@@ -9,6 +10,7 @@ export default {
             AppCarousel,
             AppMatch,
            AppSponsor,
+           AppPlayers,
             AppCarouselArticle,
            
         },
@@ -64,6 +66,7 @@ export default {
 <template lang="">
 <AppCarousel></AppCarousel>
 <AppMatch></AppMatch>
+<AppPlayers></AppPlayers>
 <AppSponsor></AppSponsor>
 <AppCarouselArticle></AppCarouselArticle>
 </template>

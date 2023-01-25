@@ -9,7 +9,7 @@
     <div>
         <nav class="navbar">
             <ul>
-                <li v-for="(item, index) in Navbar" :key="index">
+                <li class="list-header" v-for="(item, index) in Navbar" :key="index">
                     <a href="#">
                         {{item.label}}
                     </a>
@@ -36,6 +36,10 @@
             
             
 
+        }
+
+        .list-header:hover{
+            border-bottom: 5px solid white;
         }
      }
 

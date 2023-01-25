@@ -55,7 +55,8 @@
 
     header{
         height: 200px;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0,0,0,1);
+     
 
         .logo{
             @include justify-content-center;
