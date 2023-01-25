@@ -53,8 +53,8 @@
 <template lang="">
     <div class="contenitore">
         <ul class="d-flex">
-            <li class="d-flex" v-for="(item, index) in ArrayMatch" :key="index">
-               
+            <li class="d-flex " v-for="(item, index) in ArrayMatch" :key="index">
+              <div class="d-flex"> 
                 <div class="nome">
                     <h2>{{item.nameSquadra1}}</h2>
                 </div>
@@ -69,7 +69,11 @@
                 <div class="nome">
                     <h2>{{item.nameSquadra2}}</h2>
                 </div>
-                
+            </div>  
+            <div class="luogo">
+                <span>{{item.data}}</span>
+                <span>{{ item.luogo}}</span>
+            </div> 
            
              </li>
         </ul>
@@ -89,9 +93,21 @@
             width:100px;
         }
         li{
-            background-color: rgba(0,0,0,0.3);
+            
             margin: 1rem;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            margin: auto;
+
+            
+        }
+        .luogo{
+            text-align: center;
+            color: white;
+            span{
+                margin:1rem;
+            }
         }
     }
     .squadre1{
