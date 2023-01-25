@@ -3,6 +3,7 @@ import AppCarousel from './AppCarousel.vue';
 import AppMatch from './AppMatch.vue';
 import AppPlayers from './AppPlayers.vue';
 import AppCalendar from './AppCalendar.vue';
+import AppClassifica from './AppClassifica.vue';
 import AppSponsor from './AppSponsor.vue';
 import AppCarouselArticle from './AppCarouselArticle.vue';
 
@@ -12,6 +13,7 @@ export default {
             AppMatch,
            AppSponsor,
            AppPlayers,
+           AppClassifica,
             AppCarouselArticle,
             AppCalendar,
            
@@ -69,6 +71,7 @@ export default {
 <AppCarousel></AppCarousel>
 <AppMatch></AppMatch>
 <AppCalendar></AppCalendar>
+<AppClassifica></AppClassifica>
 <AppPlayers></AppPlayers>
 <AppSponsor></AppSponsor>
 <AppCarouselArticle></AppCarouselArticle>
