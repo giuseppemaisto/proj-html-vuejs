@@ -1,8 +1,16 @@
 <template>
+  <div class="title">
+    <h1>Resent New & Article</h1>
+    <h6>Be aware of the football world</h6>
+  </div>
+   
     <Carousel :items-to-show="4" :wrap-around="true">
-
+     
       <Slide v-for=" (item, index) in article" :key="index">
+       
         <div class="slider">
+
+            
             <img :src="item.image" />  
             <h5>{{ item.date }}</h5>
             <h2>{{ item.title }}</h2>
@@ -74,6 +82,10 @@
  
   </script>
   <style lang="scss" scoped>
+  .title h1, h6{
+    text-align: center;
+    font-weight: bold;
+  }
 .slider{
     
     margin-bottom: 2rem;
