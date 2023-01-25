@@ -1,25 +1,17 @@
 <script>
 import AppCarousel from './AppCarousel.vue';
+import AppMatch from './AppMatch.vue';
 export default {
         components:{
-            AppCarousel
+            AppCarousel,
+            AppMatch,
         },
-        data(){
-            return{
-                slider:[
-                    {
-                        image:'/../public/img/slider1-1.jpg'
-                    },
-                    {
-                        image:'/../public/img/slider2-1.jpg'
-                    },
-                ]
-            }
-        }
+       
 }
 </script>
 <template lang="">
 <AppCarousel></AppCarousel>
+<AppMatch></AppMatch>
 </template>
 <style lang="scss" scoped>
 *{
